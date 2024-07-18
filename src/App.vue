@@ -1,5 +1,33 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+//importo axios 
+import axios from 'axios';
+export default{
+  //qui metto i dati che verranno poi usati sia nei metodi sia in pagina con i binding 
+  data(){
+    //nel data ci vuole sempre il return; i data nel return si dichiarano con i due punti :
+    return{
+      base_link:"http://127.0.0.1:8000/",
+      progetti:"",
+
+    }
+  },
+  //nei methods scrivo le eventuali funzioni da andare a richiamare in pagina
+  methods:{
+
+  },
+  //nel mounted inserisco le funzioni che verranno caricate all'avvio della pagina
+  mounted(){
+    //chiamata axios che va a recuperare i dati dei progetti
+    axios.get(`http://127.0.0.1:8000/api/projects`)
+    .then((response)=>{
+      this.progetti=response.data.projects;
+      console.log(this.progetti)
+    });
+  }
+
+
+
+}
 </script>
 
 <template>
@@ -11,7 +39,6 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
