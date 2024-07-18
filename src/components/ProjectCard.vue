@@ -9,10 +9,13 @@ export default{
 </script>
 
 <template>
-        <!-- <div class="card">
-          <p>{{ progetti.name }}</p>
-          <p>{{ progetti.description }}</p>
-        </div> -->
+
+        <!-- 
+            <div class="card">
+              <p>{{ progetti.name }}</p>
+              <p>{{ progetti.description }}</p>
+            </div> 
+        -->
 
 
 </template>
