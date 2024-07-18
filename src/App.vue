@@ -1,6 +1,7 @@
 <script>
 //importo axios 
 import axios from 'axios';
+import ProjectCard from './components/ProjectCard.vue' 
 ;
 export default{
   //qui metto i dati che verranno poi usati sia nei metodi sia in pagina con i binding 
@@ -37,12 +38,11 @@ export default{
   <div class="container">
     <div class="row">
       <div class="col" v-for="project in progetti">
-        <div class="card">
+        <!-- <div class="card">
           <p>{{ project.name }}</p>
           <p>{{ project.description }}</p>
         </div>
-   
-
+        <ProjectCard/> -->
       </div>
     </div>
   </div>
