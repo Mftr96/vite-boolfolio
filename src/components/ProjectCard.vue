@@ -2,7 +2,12 @@
 export default{
     //con le props importo i dati dal componente genitore app.vue
     props:{
-
+        progetti:Array,
+    },
+    methods:{
+        f_progetti(){
+            console.log(this.progetti);
+        }
     }
 }
 
@@ -10,12 +15,14 @@ export default{
 
 <template>
 
-        <!-- 
-            <div class="card">
-              <p>{{ progetti.name }}</p>
-              <p>{{ progetti.description }}</p>
-            </div> 
-        -->
+       
+        <!-- <div class="card">
+          <p>{{ project.name }}</p>
+          <p>{{ project.description }}</p>
+        </div> -->
+
+        <p>ciao</p>
+        
 
 
 </template>
