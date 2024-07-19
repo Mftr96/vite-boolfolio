@@ -1,12 +1,13 @@
 <script>
 //importo axios 
 import axios from 'axios';
-import projectCard from './components/projectCard.vue' 
+import ProjectCard from './components/ProjectCard.vue' 
 import store from './data/store.js'
 ;
 export default{
+  
   components:{
-    projectCard
+    ProjectCard
   },
   //qui metto i dati che verranno poi usati sia nei metodi sia in pagina con i binding 
   data(){

@@ -1,13 +1,12 @@
 <script>
+import store from '../data/store.js';
 export default{
     //con le props importo i dati dal componente genitore app.vue
     props:{
         progetti:Array,
     },
     methods:{
-        f_progetti(){
-            console.log(this.progetti);
-        }
+      
     }
 }
 
