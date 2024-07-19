@@ -20,11 +20,11 @@ methods:{
 
 },
 mounted(){
-    // axios.get(this.store.base_link+"api/projects")
-    // .then((response)=>{
-    //   this.store.progetti=response.data.projects.data;
-    //   console.log(this.progetti)
-    // });
+     axios.get(this.store.base_link+"api/projects")
+     .then((response)=>{
+       this.store.progetti=response.data.projects.data;
+       console.log(this.progetti)
+     });
 
 },
 
