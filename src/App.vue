@@ -1,13 +1,14 @@
 <script>
 //importo axios 
 import axios from 'axios';
-import ProjectCard from './components/ProjectCard.vue' 
-import store from './data/store.js'
-;
+import store from './data/store.js';
+import AppHeader from './components/AppHeader.vue';
+import { RouterView } from 'vue-router';
 export default{
   
   components:{
-    ProjectCard
+    AppHeader,
+    RouterView,
   },
   //qui metto i dati che verranno poi usati sia nei metodi sia in pagina con i binding 
   data(){
@@ -22,33 +23,15 @@ export default{
   },
   //nel mounted inserisco le funzioni che verranno caricate all'avvio della pagina
   mounted(){
-    //chiamata axios che va a recuperare i dati dei progetti
-    axios.get(this.store.base_link+"api/projects")
-    .then((response)=>{
-      this.store.progetti=response.data.projects.data;
-      console.log(this.progetti)
-    });
+ 
   }
-
-
-
 }
 </script>
 
 <template>
-  <h1 class="text-center">ciao!ecco la lista dei progetti!</h1>
-  <div class="container">
-    <div class="row">
-      <div class="col" v-for="project,i in store.progetti">
-        <div class="card">
-          <p>{{ project.name }}</p>
-          <p>{{ project.description }}</p>
-        </div>
-        <!-- <projectCard/> -->
-      </div>
-    </div>
-  </div>
- 
+  <AppHeader></AppHeader>
+  <router-view></router-view>
+
 </template>
 
 <style scoped>

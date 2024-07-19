@@ -1,5 +1,8 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
+import {router} from './router.js';
 
-createApp(App).mount('#app')
+//importo ili router per navigare tra le pagine
+createApp(App).use(router).mount('#app');
+
