@@ -25,3 +25,65 @@ vado a costruire nel file app.vue la struttura js di vue
 importo axios nel file app.vue
 
 vado a spezzettare il link della chiamata axios nei data salavando la base del link 
+
+-------------
+
+inizia ad implementare il sistema di rotte lato vue, creando quattro rotte: home,  about, projects e contacts.
+
+crea i componenti pagina da associare alle quattro rotte: AppHome, AppAbout, AppProjects, AppContacts.
+
+trasferisci la logica usata ieri per il recupero dei progetti nel componente dedicato AppProjects che hai servito tramite la rotta projects
+----
+
+esecuzione:
+eseguito comando 
+```bash
+npm install vue-router@4
+```
+che aggiorna i file package-lock e package
+
+successivamente compilare il file router.js come da slide
+```javascript
+//il file che indirizza alle rotte  della pagina
+
+import {createRouter,createWebHistory} from 'vue-router';
+
+//qui importo i componenti per le varie rotte
+
+//------
+
+//qui creo la const router che crea le rotte come in laravel il file web.php
+const router =createRouter({
+    history:createWebHIstory(),
+    //chi andranno messe le rotte tipo laravel, anche se qui vanno messe in forma d'oggetto
+    routes:[
+        {
+            /*esempio rotta 
+            path:qui va messa la rotta (es: '/')
+            name:nome della rotta:(es: 'home')
+            component:nome del componenta preso da pages:(es.AppHome)
+            
+            */
+
+        }
+
+
+    ]
+});
+//chiusura createRouter tonda-graffa
+
+//faccio export del router
+export {router};
+
+```
+creare cartella pages in cui ci sono i macro-commponenti;ovvero le pagine lato-frontend
+
+andare a lavorare su ProjectCard per scomporre il codice 
+andare a mettere i dati in un file store.js
+
+inserire ProjectCard in un componente da pages
+
+creare le pages:crea i componenti pagina da associare alle quattro rotte: AppHome, AppAbout, AppProjects, AppContacts.
+
+andare poi a scrivere le rotte nel file route.js relative ai componenti menzionati qui sopra 
+
