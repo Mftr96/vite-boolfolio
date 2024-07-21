@@ -17,7 +17,6 @@ export default{
         <div class="card">
           <p>{{ project.name }}</p>
           <p>{{ project.description }}</p>
-          <p>ciao</p>
         </div>
 </template>
 
