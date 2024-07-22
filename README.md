@@ -127,3 +127,17 @@ VUE: Crea componente per mostrare il singolo progetto e fai partire da li una nu
 Bonus:
 Implementazione della rotta catch all e pagina 404
 aggiungi lo slug ai progetti, ricordandoti di aggiornare sia la parte di Laravel  che Vue (fate una branch separata).
+
+parte vue:dopo essersi assicurato che la chiamata api creata funziona andiamo a creare la vista(pardon,la pagina )SingleProject e di inserirlo nelle rotte del file router.js.
+La rotta nel file router.js dovrà avere anche il parametro dell'id per essere visualizzata 
+```javascript
+        {   
+            /*inserisco alla fine del path con i due punti 
+            il parametro da passare,ovvero l'id che viene poi usato
+             dalla chiamata API per eseguire la chiamata asincrona*/
+            path:'projects/:id',
+            name:'singleproject',
+            component:SingleProject
+        },
+```
+attenzione per quanto riguarda la chiamata axios del SingleProject, bisogna usare il $route

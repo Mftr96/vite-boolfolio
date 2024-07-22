@@ -5,6 +5,7 @@ import AppProjects from './pages/AppProjects.vue';
 import AppHome from './pages/AppHome.vue';
 import AppContacts from './pages/AppContacts.vue';
 import AppAbout from './pages/AppAbout.vue';
+import SingleProject from './pages/SingleProject.vue';
 
 //qui importo i componenti per le varie rotte
 
@@ -33,6 +34,13 @@ const router = createRouter({
             path: '/projects',
             name: 'projects',
             component: AppProjects,
+        },
+        //gestico la rotta SingleProject aggiungendo il parametro id
+        {   
+            //inserisco alla fine del path con i due punti il parametro da passare,ovvero l'id
+            path:'/projects/:id',
+            name:'singleproject',
+            component:SingleProject
         },
         {
             path: '/contacts',

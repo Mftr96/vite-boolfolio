@@ -4,7 +4,8 @@ import {reactive} from "vue";
 const store=reactive({
     base_link:"http://127.0.0.1:8000/",
     progetti:"",
-    link_axios:"http://127.0.0.1:8000/api/projects",
+    progetto:"",
+    link_axios:"http://127.0.0.1:8000/api/projects/",
 })
 //faccio export dei dati tramite la variabile store
 export default store;
