@@ -54,7 +54,7 @@ import {createRouter,createWebHistory} from 'vue-router';
 
 //qui creo la const router che crea le rotte come in laravel il file web.php
 const router =createRouter({
-    history:createWebHIstory(),
+    history:createWebHistory(),
     //chi andranno messe le rotte tipo laravel, anche se qui vanno messe in forma d'oggetto
     routes:[
         {
@@ -87,3 +87,43 @@ creare le pages:crea i componenti pagina da associare alle quattro rotte: AppHom
 
 andare poi a scrivere le rotte nel file route.js relative ai componenti menzionati qui sopra 
 
+per quanto riguarda la parte di app.vue, importare i componenti Appheader e routerView per metterli poi nel template
+
+```javascript
+//importo componente AppHeader per le rotte della pagina
+import AppHeader from './components/AppHeader.vue';
+//importo RouterView (non è da mettere nei components di App.vue!)
+import { RouterView } from 'vue-router';
+
+
+```
+<template>
+  <AppHeader></AppHeader>
+  <router-view></router-view>
+
+</template>
+
+nel file AppHeader verrà poi strutturata la rotta tramite router-link (da importare nel file )
+
+```javascript
+import { RouterLink } from 'vue-router';
+
+```
+il Router link ha un attributo(:to) che va ad indirizzare alla rotta designata nel seguente modo 
+"{ name:nome rotta }";in questo caso ho recuperato il nome della rotta tramite ciclo di array menuItems
+<li v-for="(item, index) in menuItems" :key="index">
+    <!-- invece che il tag anchor uso router link per indirizzare alle pagine -->
+    <router-link :to="{ name:menuItems[index] }" class="nav-link">
+    {{ menuItems[index] }}</router-link>
+</li>
+-------
+Oggi proseguite con l'implementazione di vue-router come visto stamattina in classe, stesse repo di ieri.
+Descrizione:
+completa implementazione assegnata venerdi (se incompleta)
+LARAVEL: crea un nuovo endpoint API per gestire le richieste per i singoli progetti
+
+VUE: Crea componente per mostrare il singolo progetto e fai partire da li una nuova chiamata all'endpoint appena creato
+
+Bonus:
+Implementazione della rotta catch all e pagina 404
+aggiungi lo slug ai progetti, ricordandoti di aggiornare sia la parte di Laravel  che Vue (fate una branch separata).
