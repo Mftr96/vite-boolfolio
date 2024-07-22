@@ -14,11 +14,17 @@ import { RouterLink } from 'vue-router';
 
         },
         mounted(){
-            console.log(this.$route.params.id);
             axios.get(`http://127.0.0.1:8000/api/projects/ ${this.$route.params.id}`)
             .then((response) => {
-                this.store.progetto = response.data.project;
-                console.log(this.store.progetto)
+                //bonus:implemento la condizione che verifichi che la pagina restituisca indirizzo esistente
+                if(response.data.success){
+                    this.store.progetto = response.data.project;
+                    console.log(this.store.progetto);
+                }
+                else{
+                    //console.log(response.data.message);
+                    this.$router.push({name:'notfound'});
+                }
             });
 
         }    

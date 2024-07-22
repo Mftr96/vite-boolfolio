@@ -1,17 +1,17 @@
 <script>
 import store from '../data/store.js';
-export default{
-    components:{
+export default {
+    components: {
     },
-    data(){
-        return{
-         
+    data() {
+        return {
+            store,
         }
     },
-    methods:{
+    methods: {
 
     },
-    mounted(){
+    mounted() {
 
     },
 
@@ -20,45 +20,29 @@ export default{
 </script>
 
 <template>
-       <h2>qui sei in contacts</h2>
-       <form action="">
+    <h2>qui sei in contacts</h2>
+    <form action="">
         <div class="mb-3">
             <label for="" class="form-label">Name</label>
-            <input
-                type="text"
-                class="form-control"
-                name=""
-                id=""
-                aria-describedby="helpId"
-                placeholder="inserisci il tuo nome "
-            />
+            <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                placeholder="inserisci il tuo nome " />
             <small id="helpId" class="form-text text-muted">Help text</small>
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Email</label>
-            <input
-                type="email"
-                class="form-control"
-                name=""
-                id=""
-                aria-describedby="emailHelpId"
-                placeholder="abc@mail.com"
-            />
-            <small id="emailHelpId" class="form-text text-muted"
-                >Help text</small
-            >
+            <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId"
+                placeholder="abc@mail.com" />
+            <small id="emailHelpId" class="form-text text-muted">Help text</small>
         </div>
         <div class="mb-3">
             <label for="" class="form-label">oggetto della mail</label>
             <textarea class="form-control" name="" id="" rows="2"></textarea>
         </div>
-        
-        
-        
 
-       </form>
+
+
+
+    </form>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

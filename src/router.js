@@ -6,6 +6,7 @@ import AppHome from './pages/AppHome.vue';
 import AppContacts from './pages/AppContacts.vue';
 import AppAbout from './pages/AppAbout.vue';
 import SingleProject from './pages/SingleProject.vue';
+import Notfound from './pages/NotFound.vue';
 
 //qui importo i componenti per le varie rotte
 
@@ -46,6 +47,12 @@ const router = createRouter({
             path: '/contacts',
             name: 'contacts',
             component: AppContacts,
+        },
+        //bonus:inserisco la rotta notfound
+        {
+            path: '/notfound',
+            name: 'notfound',
+            component: Notfound,
         },
     ]
 });

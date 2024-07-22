@@ -141,3 +141,16 @@ La rotta nel file router.js dovrà avere anche il parametro dell'id per essere v
         },
 ```
 attenzione per quanto riguarda la chiamata axios del SingleProject, bisogna usare il $route
+
+```javascript
+    axios.get(`http://127.0.0.1:8000/api/projects/ ${this.$route.params.id}`)
+    .then((response) => {
+        //attenzione che nella chiamata api lo hai chiamato project(giustamente perché è singolo!
+        this.store.progetto = response.data.project;
+        console.log(this.store.progetto)
+    });
+
+```
+
+nel bonus viene richiesto l'implementazione della pagina NotFound, quindi bisognerà creare 
+una pagina con relativa rotta
